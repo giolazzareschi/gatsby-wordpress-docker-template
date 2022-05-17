@@ -22,5 +22,5 @@
   - docker-compose up
 
 ## Access
-  = Gatsby runs on localhost:3000
+  - Gatsby runs on localhost:3000
   - Wordpress runs on localhost: 8000
