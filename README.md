@@ -20,3 +20,7 @@
 ## Docker
   - set to root folder
   - docker-compose up
+
+## Access
+  = Gatsby runs on localhost:3000
+  - Wordpress runs on localhost: 8000
