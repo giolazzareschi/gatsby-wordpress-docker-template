@@ -45,14 +45,19 @@ services:
     command: gatsby develop -H 0.0.0.0 -p 3000
     ports:
       - "3000:3000"
+      - "3125:3125" #this is used by gatsby socket.io hot reload
     volumes:
       - ./gatsby-ts/:/app
       - /app/node_modules
     environment:
       WORDPRESS_URL: "http://wordpress_docker/graphql"
       NODE_ENV: development
+      INTERNAL_STATUS_PORT: 3125 #this is used by gatsby socket.io hot reload
     expose:
       - 3000
+      - 443
+      - 80
+      - 3125
     tty: true
     networks:
       - the_net

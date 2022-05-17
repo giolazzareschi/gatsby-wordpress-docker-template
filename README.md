@@ -6,11 +6,11 @@
 ## WSL2 network issue
   - WSL2 seems to have some issue with network that makes npm install very painfull so here it goes what solved to me
 
-  `sudo rm /etc/resolv.conf`
-  `sudo bash -c 'echo "nameserver 8.8.8.8" > /etc/resolv.conf'`
-  `sudo bash -c 'echo "[network]" > /etc/wsl.conf'`
-  `sudo bash -c 'echo "generateResolvConf = false" >> /etc/wsl.conf'`
-  `sudo chattr +i /etc/resolv.conf`
+  `sudo rm /etc/resolv.conf`\
+  `sudo bash -c 'echo "nameserver 8.8.8.8" > /etc/resolv.conf'`\
+  `sudo bash -c 'echo "[network]" > /etc/wsl.conf'`\
+  `sudo bash -c 'echo "generateResolvConf = false" >> /etc/wsl.conf'`\
+  `sudo chattr +i /etc/resolv.conf`\
 
 ## For local development run:
   - cd gatsby-ts
