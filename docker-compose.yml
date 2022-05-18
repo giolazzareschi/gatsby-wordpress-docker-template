@@ -50,7 +50,7 @@ services:
       - ./gatsby-ts/:/app
       - /app/node_modules
     environment:
-      WORDPRESS_URL: "http://wordpress_docker/graphql"
+      WORDPRESS_URL: http://wordpress_docker:80/graphql
       NODE_ENV: development
       INTERNAL_STATUS_PORT: 3125 #this is used by gatsby socket.io hot reload
     expose:

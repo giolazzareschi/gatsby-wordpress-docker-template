@@ -6,9 +6,17 @@ const config: GatsbyConfig = {
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: [
-    "gatsby-plugin-sharp", "gatsby-transformer-sharp",
-    "gatsby-plugin-sass", "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sass",
+    "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
+    {
+      resolve: 'gatsby-plugin-apollo',
+      options: {
+        uri: "http://localhost:8000/graphql"
+      }
+    },
     {
       resolve: 'gatsby-source-wordpress',
       options: {

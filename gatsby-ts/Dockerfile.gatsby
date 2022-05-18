@@ -6,14 +6,14 @@ RUN mkdir /app
 
 WORKDIR /app
 
-RUN yarn global add gatsby-cli
+RUN npm install -g gatsby-cli
 
 COPY ./package*.json ./
 
-RUN yarn install --verbose --network-timeout 100000
-
-COPY ./gatsby-config.ts ./
+RUN npm install --verbose --network-timeout=100000
 
 COPY ./tsconfig.json ./
+
+COPY ./gatsby-config.ts ./
 
 EXPOSE 3333
